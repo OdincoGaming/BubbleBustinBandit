@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d21d5c7b7ad4a47945f02cf4b55652, type: 3}
+  m_Name: BasicBubbleBouncySO
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 1378b832d86dfda45a2d9a4e72630f29, type: 2}
+  sizeRange: {x: 0.6, y: 1.6}
+  inflationTime: 1.2
+  spawnParticle: {fileID: 2204466537721207322, guid: 1b3aac273b3f3174ab40443e6ef3e8da, type: 3}
+  hitParticle: {fileID: 2330487189920707690, guid: 434a9f4b0fe0be34ba73d69443bcf7f9, type: 3}
+  deathParticle: {fileID: 804829912610875744, guid: 52ec9a128d0a5e4408575e7257891650, type: 3}
+  turbulenceRange: {x: -1.5, y: 1.5}
+  upSpeed: 0.4
+  health: 4
+  resistances:
+  - dmgType: 0
+    resistance: 0
+  - dmgType: 1
+    resistance: 0
+  - dmgType: 2
+    resistance: 0
+  - dmgType: 3
+    resistance: 0
+  - dmgType: 4
+    resistance: 0
+  score: 1

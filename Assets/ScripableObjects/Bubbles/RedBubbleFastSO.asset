@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d21d5c7b7ad4a47945f02cf4b55652, type: 3}
+  m_Name: RedBubbleFastSO
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 7b3b18872ea33bf4a8a2eca822f30047, type: 2}
+  sizeRange: {x: 0.4, y: 1.2}
+  inflationTime: 0.75
+  spawnParticle: {fileID: 1240421752458096723, guid: 4f07e5f35eccdad4599359795699ec70, type: 3}
+  hitParticle: {fileID: 2330487189920707690, guid: 3d70d6e06bc7b854699c473c6979c988, type: 3}
+  deathParticle: {fileID: 804829912610875744, guid: a88279adb0408bc43a4ac02b013f69c1, type: 3}
+  turbulenceRange: {x: -0.2, y: 0.2}
+  upSpeed: 1.4
+  health: 4
+  resistances:
+  - dmgType: 0
+    resistance: 1
+  - dmgType: 1
+    resistance: 1
+  - dmgType: 2
+    resistance: 0
+  - dmgType: 3
+    resistance: 1
+  - dmgType: 4
+    resistance: 1
+  score: 1
