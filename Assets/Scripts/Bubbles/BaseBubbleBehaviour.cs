@@ -45,7 +45,6 @@ public class BaseBubbleBehaviour : MonoBehaviour
     {
         Vector3 startScale = Vector3.zero;
         Vector3 endScale = new(targetScale, targetScale, targetScale);
-        //Timer timer = Timer.Register
         this.AttachTimer
         (
             duration: lerpDuration,

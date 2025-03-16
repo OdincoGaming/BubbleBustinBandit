@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c924e83e01cedcc489b3d88f3911e0a3, type: 3}
+  m_Name: DamageTypeColors
+  m_EditorClassIdentifier: 
+  description: 
+  _guid: f688a13e1a821c442910e6cfb702acc1
+  basic: {r: 0.6156863, g: 0.5921569, b: 0.53333336, a: 1}
+  blue: {r: 0.25490198, g: 0.4039216, b: 0.73333335, a: 1}
+  red: {r: 0.6156863, g: 0.14901961, b: 0.12941177, a: 1}
+  green: {r: 0.27058825, g: 0.5372549, b: 0.08235294, a: 1}
+  yellow: {r: 0.6156863, g: 0.54901963, b: 0.1137255, a: 1}
+  pink: {r: 0.6117647, g: 0.227451, b: 0.5294118, a: 1}
+  orange: {r: 0.6117647, g: 0.29803923, b: 0.06666667, a: 1}
+  cyan: {r: 0.14117648, g: 0.5921569, b: 0.4901961, a: 1}

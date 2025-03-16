@@ -38,9 +38,12 @@ public class SpawnPointBehaviour : MonoBehaviour
     }
     private void LoopSARI()
     {
-        int ind = Random.Range(0, _tmrTrs[0].bubbles.Count);
-        channel.RaiseEvent(new(transform, _tmrTrs[0].bubbles[ind]));
-        SpawnAtRandomIntervals(_tmrTrs[0].bubbles[ind].inflationTime);
+        if (_tmrTrs.Count > 0)
+        {
+            int ind = Random.Range(0, _tmrTrs[0].bubbles.Count);
+            channel.RaiseEvent(new(transform, _tmrTrs[0].bubbles[ind]));
+            SpawnAtRandomIntervals(_tmrTrs[0].bubbles[ind].inflationTime);
+        }
     }
     private void TierShift()
     {

@@ -23,13 +23,13 @@ MonoBehaviour:
   health: 4
   resistances:
   - dmgType: 0
-    resistance: 1
+    resistance: 3
   - dmgType: 1
     resistance: 0
   - dmgType: 2
-    resistance: 1
+    resistance: 3
   - dmgType: 3
-    resistance: 1
+    resistance: 3
   - dmgType: 4
-    resistance: 1
+    resistance: 3
   score: 2

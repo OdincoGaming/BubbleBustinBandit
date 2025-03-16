@@ -89,7 +89,7 @@ public class Timer
         // create a manager object to update all the timers if one does not already exist.
         if (Timer._manager == null)
         {
-            TimerManager managerInScene = Object.FindObjectOfType<TimerManager>();
+            TimerManager managerInScene = Object.FindFirstObjectByType<TimerManager>();
             if (managerInScene != null)
             {
                 Timer._manager = managerInScene;
