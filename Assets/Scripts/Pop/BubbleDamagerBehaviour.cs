@@ -7,6 +7,7 @@ public class BubbleDamagerBehaviour : MonoBehaviour
     public int limiter = 0;
     [SerializeField] private BubbleEventChannelSO popChannel;
     [SerializeField] private MultiplierRequestEventChannelSO requestChannel;
+    [SerializeField] private Scoreboard scoreboard;
     private int numHits = 0;
     private bool hasBubbleBeenPoppedThisClick = false;
     private void OnEnable()
@@ -29,6 +30,11 @@ public class BubbleDamagerBehaviour : MonoBehaviour
                     MultiplierRequest mr = new(numHits, new(Input.mousePosition.x, Input.mousePosition.y));
                     requestChannel.RaiseEvent(mr);
                 }
+            }
+
+            if (numHits < 1)
+            {
+                scoreboard.ResetMultiplier();
             }
             limiter = 0;
             numHits = 0;

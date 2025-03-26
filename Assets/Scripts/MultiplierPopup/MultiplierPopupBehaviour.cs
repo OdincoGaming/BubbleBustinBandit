@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class MultiplierPopupBehaviour : MonoBehaviour
 {
     [SerializeField] private MultiplierPopupBehaviourEventChannelSO returnChannel;
+    [SerializeField] private IntEventChannelSO valueChannel;
     [SerializeField] private List<TextMeshProUGUI> textboxes;
     [SerializeField] private RectTransform target;
     [SerializeField] private float lerpDuration;
@@ -11,6 +12,7 @@ public class MultiplierPopupBehaviour : MonoBehaviour
     [SerializeField] private AnimationCurve xCurveNeg;
     [SerializeField] private AnimationCurve yCurve;
     public RectTransform rectTransform;
+    private int value = 1;
 
     private void Awake()
     {
@@ -30,6 +32,7 @@ public class MultiplierPopupBehaviour : MonoBehaviour
                 rectTransform.position = target.position;
                 ClearText();
                 returnChannel.RaiseEvent(this);
+                valueChannel.RaiseEvent(value);
             },
             onUpdate: secondsElapsed =>
             {
@@ -61,6 +64,7 @@ public class MultiplierPopupBehaviour : MonoBehaviour
 
     public void SetText(int mult)
     {
+        value = mult;
         foreach(TextMeshProUGUI t in textboxes)
         {
             t.text = "x" + mult.ToString();

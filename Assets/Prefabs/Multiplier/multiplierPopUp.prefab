@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   returnChannel: {fileID: 11400000, guid: 9c405cfe8e15ec4498da9a8bf06b58e5, type: 2}
+  valueChannel: {fileID: 11400000, guid: f6430c80c3c4b8644a6bbd662cd83498, type: 2}
   textboxes:
   - {fileID: 2740472537498656392}
   - {fileID: 903329727363433197}

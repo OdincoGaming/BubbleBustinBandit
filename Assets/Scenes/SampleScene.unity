@@ -390,6 +390,7 @@ MonoBehaviour:
   limiter: 0
   popChannel: {fileID: 11400000, guid: 7228cc083001d6f49acb2680667f33e7, type: 2}
   requestChannel: {fileID: 11400000, guid: 2767b48803e73fe46af872002d700710, type: 2}
+  scoreboard: {fileID: 301679642}
 --- !u!65 &33993263
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2145,6 +2146,7 @@ MonoBehaviour:
   - {fileID: 730397858}
   - {fileID: 566109956}
   - {fileID: 2142042930}
+  scoreboard: {fileID: 301679642}
 --- !u!1 &235944662
 GameObject:
   m_ObjectHideFlags: 0
@@ -3124,7 +3126,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294402926}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3187,6 +3189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 301679637}
   - component: {fileID: 301679641}
+  - component: {fileID: 301679642}
   - component: {fileID: 301679640}
   - component: {fileID: 301679639}
   - component: {fileID: 301679638}
@@ -3299,6 +3302,28 @@ MonoBehaviour:
   factory: {fileID: 11400000, guid: b26cbbe5bb1478f479ee595771de8133, type: 2}
   _requestChannel: {fileID: 11400000, guid: 2767b48803e73fe46af872002d700710, type: 2}
   _returnChannel: {fileID: 11400000, guid: 9c405cfe8e15ec4498da9a8bf06b58e5, type: 2}
+--- !u!114 &301679642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301679636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c810a4ed3d9d6245a3e11227976be36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubbleChannel: {fileID: 11400000, guid: 7228cc083001d6f49acb2680667f33e7, type: 2}
+  valueChannel: {fileID: 11400000, guid: f6430c80c3c4b8644a6bbd662cd83498, type: 2}
+  scoreTexts:
+  - {fileID: 828312404}
+  - {fileID: 1897961965}
+  multTexts:
+  - {fileID: 1857320198}
+  - {fileID: 456017997}
+  multDefaultColor: {r: 1, g: 1, b: 1, a: 1}
+  multGlowColor: {r: 0.77647066, g: 0.6039216, b: 0.32156864, a: 1}
 --- !u!1 &308911062
 GameObject:
   m_ObjectHideFlags: 0
@@ -5550,7 +5575,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 566109955}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7151,7 +7176,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828312402}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -7164,7 +7189,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 123456
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: eba165f6bb6d78445a516762b2e02800, type: 2}
   m_sharedMaterial: {fileID: -4771656268475017313, guid: eba165f6bb6d78445a516762b2e02800, type: 2}
@@ -13913,7 +13938,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857320196}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -14283,7 +14308,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 123456
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: eba165f6bb6d78445a516762b2e02800, type: 2}
   m_sharedMaterial: {fileID: -4771656268475017313, guid: eba165f6bb6d78445a516762b2e02800, type: 2}
@@ -15943,7 +15968,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142042929}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

@@ -8,9 +8,9 @@ public class DamageBehaviour : MonoBehaviour
     [SerializeField] private Slider slider;
     [SerializeField] private float effectTimer = 2f;
     [SerializeField] private List<Image> images;
+    [SerializeField] private Scoreboard scoreboard;
     private Color startColor;
     private Color endColor;
-    //private Timer timer;
     private void OnTriggerEnter(Collider other)
     {
         slider.value -= .1f;
@@ -20,6 +20,7 @@ public class DamageBehaviour : MonoBehaviour
         {
             bubble.SetLoss(true);
             bubble.TakeDamage(DamageTypeEnum.basic, 10000);
+            scoreboard.ResetMultiplier();
         }
     }
 
@@ -35,10 +36,6 @@ public class DamageBehaviour : MonoBehaviour
         Image[] childImages = i.GetComponentsInChildren<Image>();
 
         ToggleImageActive(true, i);
-        /*if(timer != null)
-        {
-            timer.Cancel();
-        }*/
         Timer timer = Timer.Register
         (
             duration: effectTimer,
