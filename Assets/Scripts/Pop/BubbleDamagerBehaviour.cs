@@ -49,6 +49,7 @@ public class BubbleDamagerBehaviour : MonoBehaviour
 
     private void Respond(BaseBubbleBehaviour bbb)
     {
-        hasBubbleBeenPoppedThisClick = true;
+        if(!bbb.IsLost())
+            hasBubbleBeenPoppedThisClick = true;
     }
 }

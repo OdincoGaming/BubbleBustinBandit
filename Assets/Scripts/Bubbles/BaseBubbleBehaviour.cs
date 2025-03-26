@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,6 +15,7 @@ public class BaseBubbleBehaviour : MonoBehaviour
 
     private float turbulenceX = 0f;
     private float turbulenceZ = 0f;
+    private bool wasLost = false;
 
     public BaseBubbleSO GetBubbleData()
     {
@@ -28,7 +30,6 @@ public class BaseBubbleBehaviour : MonoBehaviour
     {
         float size = Random.Range(bubbleData.sizeRange.x, bubbleData.sizeRange.y);
         InflateBubbleTimer(size, bubbleData.inflationTime);
-
         if(rb == null)
             rb = GetComponent<Rigidbody>();
 
@@ -66,6 +67,25 @@ public class BaseBubbleBehaviour : MonoBehaviour
         Instantiate(bubbleData.hitParticle, this.transform.position + bubbleData.hitParticle.transform.position, bubbleData.hitParticle.transform.rotation);
 
         int baseDamage = 4;
+        foreach (Resistance r in bubbleData.resistances)
+        {
+            if (r.dmgType == dmgType)
+            {
+                baseDamage -= r.resistance;
+            }
+        }
+
+        health -= baseDamage;
+        if (health <= 0)
+        {
+            Pop();
+        }
+    }
+    public void TakeDamage(DamageTypeEnum dmgType, int dmg)
+    {
+        Instantiate(bubbleData.hitParticle, this.transform.position + bubbleData.hitParticle.transform.position, bubbleData.hitParticle.transform.rotation);
+
+        int baseDamage = dmg;
         foreach (Resistance r in bubbleData.resistances)
         {
             if (r.dmgType == dmgType)
@@ -123,5 +143,15 @@ public class BaseBubbleBehaviour : MonoBehaviour
     {
         turbulenceX *= -1;
         turbulenceZ *= -1;
+    }
+
+    public void SetLoss(bool b)
+    {
+        wasLost = b;
+    }
+
+    public bool IsLost()
+    {
+        return wasLost;
     }
 }

@@ -54,6 +54,7 @@ public class BubblePool : MonoBehaviour
         bubble.rb.angularVelocity = Vector3.zero;
         bubble.rb.WakeUp();
         bubble.gameObject.SetActive(true);
+        bubble.SetLoss(false);
     }
 
     private void Return(BaseBubbleBehaviour bubble)

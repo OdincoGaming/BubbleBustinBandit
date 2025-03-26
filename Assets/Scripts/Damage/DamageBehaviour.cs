@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,12 +10,19 @@ public class DamageBehaviour : MonoBehaviour
     [SerializeField] private List<Image> images;
     private Color startColor;
     private Color endColor;
-    private Timer timer;
+    //private Timer timer;
     private void OnTriggerEnter(Collider other)
     {
         slider.value -= .1f;
         TriggerEffect();
+        BaseBubbleBehaviour bubble = other.GetComponent<BaseBubbleBehaviour>();
+        if (bubble != null)
+        {
+            bubble.SetLoss(true);
+            bubble.TakeDamage(DamageTypeEnum.basic, 10000);
+        }
     }
+
     private void Awake()
     {
         startColor = images[0].color;
@@ -23,23 +31,26 @@ public class DamageBehaviour : MonoBehaviour
 
     private void TriggerEffect()
     {
-        ToggleImageActive(true);
-        if(timer != null)
+        Image i = images[Random.Range(0, images.Count)];
+        Image[] childImages = i.GetComponentsInChildren<Image>();
+
+        ToggleImageActive(true, i);
+        /*if(timer != null)
         {
             timer.Cancel();
-        }
-        timer = Timer.Register
+        }*/
+        Timer timer = Timer.Register
         (
             duration: effectTimer,
-            onComplete: () => EndEffect(startColor),
+            onComplete: () => EndEffect(startColor, childImages, i),
             onUpdate: secondsElapsed =>
             {
                 float progress = secondsElapsed / effectTimer;
                 progress = progress * progress * (3f - 2f * progress);
                 Color newColor = Color.Lerp(startColor, endColor, progress);
-                foreach (Image i in images)
+                foreach (Image j in childImages)
                 {
-                    i.color = newColor;
+                    j.color = newColor;
                 }
                 secondsElapsed += Time.deltaTime;
             },
@@ -47,19 +58,17 @@ public class DamageBehaviour : MonoBehaviour
             useRealTime: true
         );
     }
-    private void EndEffect(Color startColor)
+    private void EndEffect(Color startColor, Image[] childImages, Image parentImage)
     {
-        ToggleImageActive(false);
-        foreach (Image i in images)
+        ToggleImageActive(false, parentImage);
+        foreach (Image i in childImages)
         {
             i.color = startColor;
         }
+        parentImage.color = startColor;
     }
-    private void ToggleImageActive(bool isActive)
+    private void ToggleImageActive(bool isActive, Image parentImage)
     {
-        foreach(Image i in images)
-        {
-            i.gameObject.SetActive(isActive);
-        }
+        parentImage.gameObject.SetActive(isActive);
     }
 }

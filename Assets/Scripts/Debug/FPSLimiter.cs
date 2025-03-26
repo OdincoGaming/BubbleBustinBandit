@@ -5,6 +5,6 @@ public class FPSLimiter : MonoBehaviour
     private void OnEnable()
     {
         Application.runInBackground = false;
-        Application.targetFrameRate = 30;
+        Application.targetFrameRate = 60;
     }
 }
