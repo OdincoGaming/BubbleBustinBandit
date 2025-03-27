@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DamageBehaviour : MonoBehaviour
@@ -9,6 +10,7 @@ public class DamageBehaviour : MonoBehaviour
     [SerializeField] private float effectTimer = 2f;
     [SerializeField] private List<Image> images;
     [SerializeField] private Scoreboard scoreboard;
+    public UnityEvent gameOverEvent;
     private Color startColor;
     private Color endColor;
     private void OnTriggerEnter(Collider other)
@@ -21,6 +23,11 @@ public class DamageBehaviour : MonoBehaviour
             bubble.SetLoss(true);
             bubble.TakeDamage(DamageTypeEnum.basic, 10000);
             scoreboard.ResetMultiplier();
+        }
+
+        if(slider.value <= 0)
+        {
+            gameOverEvent.Invoke();
         }
     }
 

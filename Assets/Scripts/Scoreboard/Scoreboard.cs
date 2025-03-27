@@ -170,4 +170,9 @@ public class Scoreboard : MonoBehaviour
             useRealTime: true
         );
     }
+
+    public float GetScore()
+    {
+        return score;
+    }
 }
