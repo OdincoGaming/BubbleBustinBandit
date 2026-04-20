@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class DamageBehaviour : MonoBehaviour
 {
     [SerializeField] private Slider slider;
+    [SerializeField] private GameObject sliderEffect;
     [SerializeField] private float effectTimer = 2f;
     [SerializeField] private List<Image> images;
     [SerializeField] private Scoreboard scoreboard;
@@ -41,7 +42,6 @@ public class DamageBehaviour : MonoBehaviour
     {
         Image i = images[Random.Range(0, images.Count)];
         Image[] childImages = i.GetComponentsInChildren<Image>();
-
         ToggleImageActive(true, i);
         Timer timer = Timer.Register
         (

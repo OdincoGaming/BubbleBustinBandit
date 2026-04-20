@@ -254,7 +254,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: MobileCanvasHitFX/Image
+    path: MobileCanvasHitFX/bubbleSplat
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -275,7 +275,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: MobileCanvasHitFX/Image (3)
+    path: MobileCanvasHitFX/bubbleSplat (2)
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -296,7 +296,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: MobileCanvasHitFX/Image (2)
+    path: MobileCanvasHitFX/bubbleSplat (3)
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -317,7 +317,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: MobileCanvasHitFX/Image (1)
+    path: MobileCanvasHitFX/bubbleSplat (1)
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -338,7 +338,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: MobileCanvasHitFX/Image (4)
+    path: MobileCanvasHitFX/bubbleSplat (4)
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -432,7 +432,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 703094282
+      path: 3773435843
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -441,7 +441,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3699087472
+      path: 1943360684
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -450,7 +450,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3311446321
+      path: 1791911405
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -459,7 +459,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3998087922
+      path: 1492649839
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -468,7 +468,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2470055607
+      path: 630190890
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -818,7 +818,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: MobileCanvasHitFX/Image
+    path: MobileCanvasHitFX/bubbleSplat
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -839,7 +839,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: MobileCanvasHitFX/Image (3)
+    path: MobileCanvasHitFX/bubbleSplat (2)
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -860,7 +860,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: MobileCanvasHitFX/Image (2)
+    path: MobileCanvasHitFX/bubbleSplat (3)
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -881,7 +881,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: MobileCanvasHitFX/Image (1)
+    path: MobileCanvasHitFX/bubbleSplat (1)
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -902,7 +902,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: MobileCanvasHitFX/Image (4)
+    path: MobileCanvasHitFX/bubbleSplat (4)
     classID: 1
     script: {fileID: 0}
     flags: 0
